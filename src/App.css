@@ -1,0 +1,696 @@
+/*ОБЩИЕ СТИЛИ*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #f0f2f5;
+  color: #111b21;
+}
+
+/* ОСНОВНОЙ КОНТЕЙНЕР СМАРТФОНА*/
+.whatsapp {
+  width: 360px;
+  height: 640px;
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+  margin-left: 35%;
+  box-shadow: 0 12px 40px rgba(11, 20, 26, 0.12);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+.fa-solid1{
+  color: #5f5f5f;
+}
+.icon-n-chat{
+  text-decoration: none;
+  background-color: #e1f5fe;
+}
+
+/* СТАРТОВЫЕ ЭКРАНЫ (HOME & REGISTRATION)*/
+.home, .home2 {
+  width: 360px;
+  height: 640px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 24px 30px;
+  text-align: center;
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(11, 20, 26, 0.12);
+  margin-left: 35%;
+}
+
+.home2__top {
+  height: auto;
+  padding: 10px 0 20px;
+  border-bottom: 1px solid #e9edef;
+}
+
+.home2__top .b {
+  font-size: 20px;
+  color: #008069;
+  font-weight: 600;
+}
+
+.home__top, .home__top2 {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.home__skip, .home__skip2 {
+  background: none;
+  border: none;
+  color: #008069;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.home__center, .home__center2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.home__logo, .home__logo2 {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: #25D366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 38px;
+  color: white;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+.home__title, .home__title2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111b21;
+  margin-top: 28px;
+}
+
+.home__text, .home__text2 {
+  font-size: 14px;
+  color: #667781;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+.r2 {
+  text-align: center;
+  padding: 15px 10px;
+  color: #667781;
+}
+
+/* Поля ввода регистрации */
+.q .form-select, .q .form-control {
+  border: none;
+  border-bottom: 2px solid #008069;
+  border-radius: 0;
+  padding: 8px 4px;
+  font-size: 16px;
+  color: #111b21;
+  box-shadow: none !important;
+}
+
+.q .form-select:focus, .q .form-control:focus {
+  border-bottom-color: #25D366;
+}
+
+.home__button, .home__button2 {
+  width: 100%;
+  padding: 12px;
+  background: #008069;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: background 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 128, 105, 0.3);
+}
+
+.home__button:hover, .home__button2:hover {
+  background: #016b57;
+}
+
+.home__meta, .home__meta2 {
+  font-size: 11px;
+  color: #8696a0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+
+.a1 {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+}
+
+/*ШАПКА ПРИЛОЖЕНИЯ (HEADER)*/
+.wa-header {
+  height: 64px;
+  background: #ffffff;
+  color: #111b21;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  border-bottom: 1px solid #e9edef;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.wa-header h2 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #008069; /* зеленый для названия */
+}
+
+.wa-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 18px;
+  color: #54656f;
+}
+
+.wa-icons i {
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.wa-icons i:hover {
+  color: #111b21;
+}
+
+/*СПИСОК ЧАТОВ И ЗВОНКОВ*/
+.wa-chats, .calls-list {
+  flex: 1;
+  overflow-y: auto;
+  background: #ffffff;
+}
+
+.chat, .call-item {
+  display: flex;
+  padding: 12px 16px;
+  gap: 14px;
+  align-items: center;
+  border-bottom: 1px solid #f0f2f5;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.chat:hover, .call-item:hover {
+  background: #f5f6f6;
+}
+
+.chat img, .call-item img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.chat-info, .call-info {
+  flex: 1;
+}
+
+.chat-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chat-top h4, .call-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #111b21;
+}
+
+.chat-top span {
+  font-size: 12px;
+  color: #8696a0;
+}
+
+.chat-info p, .call-info p {
+  margin-top: 4px;
+  color: #667781;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: flex;
+  align-items: center;
+}
+
+/* Звонки */
+.calls-title {
+  padding: 16px 16px 8px;
+  font-size: 16px;
+  color: #111b21;
+}
+.calls-title h3 { font-weight: 700; font-size: 20px; }
+
+.call-icon {
+  color: #008069;
+  font-size: 18px;
+  padding: 8px;
+}
+
+.call-in { color: #ea0038; margin-right: 6px; font-size: 12px; }
+.call-out { color: #25D366; margin-right: 6px; font-size: 12px; }
+
+/* Актуальное / Статус */
+.h3 {
+  padding: 16px 16px 0;
+  font-size: 18px;
+  color: #111b21;
+}
+b {
+  display: block;
+  padding: 10px 16px 4px;
+  font-size: 14px;
+  color: #008069;
+  font-weight: 600;
+}
+
+/* СТРАНИЦА ЧАТА*/
+.wa-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: #efeae2; /* фон чата  */
+  position: relative;
+}
+
+.message {
+  padding: 8px 12px;
+  border-radius: 12px;
+  max-width: 80%;
+  font-size: 15px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  box-shadow: 0 1px 1px rgba(11,20,26,0.12);
+  position: relative;
+}
+
+.message-left {
+  background: #ffffff;
+  color: #111b21;
+  align-self: flex-start;
+  border-top-left-radius: 0px;
+}
+
+.message-right {
+  background: #d9fdd3; /* Цвет отправление сообщения */
+  color: #111b21;
+  align-self: flex-end;
+  border-top-right-radius: 0px;
+}
+
+/* Подвал чата (Ввод сообщения) */
+.wa-footer {
+  padding: 8px 12px;
+  background: #f0f2f5;
+  border-top: 1px solid #e9edef;
+}
+
+.wa-input-box {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 24px;
+  padding: 4px 12px;
+  gap: 8px;
+}
+
+.wa-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 8px 4px;
+  font-size: 15px;
+  background: transparent;
+  color: #111b21;
+}
+
+.wa-send-btn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: #008069;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.wa-send-btn:hover {
+  background: #016b57;
+}
+
+/*ПРОФИЛЬ И НАСТРОЙКИ */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 24px 16px;
+  background: #fff;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.profile-img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  border: 3px solid #008069;
+  object-fit: cover;
+}
+
+.profile-name {
+  margin-top: 14px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111b21;
+}
+
+.profile-status {
+  margin-top: 6px;
+  color: #667781;
+  font-size: 14px;
+}
+
+.profile-menu {
+  flex: 1;
+  overflow-y: auto;
+  background: #fff;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 16px 24px;
+  border-bottom: 1px solid #f0f2f5;
+  font-size: 16px;
+  color: #111b21;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.profile-item:hover {
+  background: #f5f6f6;
+}
+
+.profile-item i {
+  color: #54656f;
+  font-size: 20px;
+  width: 24px;
+  text-align: center;
+}
+
+.aa1 {
+  text-decoration: none;
+  color: #111b21;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+/* Настройки конфиденциальности */
+.privacy-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 16px;
+  background: #008069;
+  color: white;
+}
+
+.back-btn {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.privacy-header h2 {
+  font-size: 19px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.privacy-list {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.privacy-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f2f5;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.privacy-item:hover {
+  background: #f5f6f6;
+}
+
+.privacy-item h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #111b21;
+}
+
+.privacy-item p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  color: #667781;
+}
+
+/*НИЖНЯЯ НАВИГАЦИЯ */
+.wa-bottom, .wa-bottom1, .wa-bottom2, .wa-bottom3 {
+  height: 60px;
+  border-top: 1px solid #e9edef;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #ffffff;
+  padding-bottom: 4px;
+  margin-top: auto; 
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  color: #54656f;
+  text-decoration: none;
+  cursor: pointer;
+  flex: 1;
+  transition: color 0.2s;
+}
+
+.nav-item a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item i {
+  font-size: 20px;
+  margin-bottom: 3px;
+}
+
+.nav-item span {
+  font-weight: 500;
+}
+
+/* Активный пункт меню в стиле нового WA */
+.nav-item.active, .nav-item:has(a.active) {
+  color: #008069;
+}
+.nav-item.active i {
+  background: #e1f5fe;
+  padding: 2px 16px;
+  border-radius: 16px;
+  color: #008069;
+}
+
+.h1 {
+  color: inherit !important;
+}
+
+/* КАМЕРА */
+.camera-page {
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.camera-top {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  z-index: 10;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent);
+}
+
+.icon-next { color: white; text-decoration: none; }
+.icon { font-size: 22px; cursor: pointer; }
+
+.camera-modes {
+  display: flex;
+  gap: 16px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.camera-modes span { opacity: 0.6; }
+.camera-modes .active { opacity: 1; color: #25D366; }
+
+.camera-preview {
+  flex: 1;
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+}
+
+.grid { position: absolute; inset: 0; }
+.grid::before, .grid::after {
+  content: "";
+  position: absolute;
+  background: rgba(255, 255, 255, 0.2);
+}
+.grid::before {
+  width: 1px; height: 100%; left: 33.3%;
+  box-shadow: 110px 0 rgba(255,255,255,0.2), 220px 0 rgba(255,255,255,0.2);
+}
+.grid::after {
+  height: 1px; width: 100%; top: 33.3%;
+  box-shadow: 0 180px rgba(255,255,255,0.2), 0 360px rgba(255,255,255,0.2);
+}
+
+.camera-bottom {
+  width: 100%;
+  padding: 20px 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+}
+
+.gallery-btn, .rotate-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  backdrop-filter: blur(8px);
+}
+
+.capture-btn {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  border: 4px solid white;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.inner-circle {
+  width: 54px;
+  height: 54px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* АДАПТИВНОСТЬ И МЕДИА*/
+@media (max-width: 1200px) {
+  .home, .home2, .whatsapp {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .home, .home2, .whatsapp {
+    width: 100%;
+    height: 100vh;
+    margin-left: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .home, .home2__top { padding: 30px 20px 20px; }
+  .wa-header { padding: 0 16px; }
+  .chat, .call-item { padding: 12px 16px; }
+
+  .chat img, .call-item img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .wa-bottom, .wa-bottom1, .wa-bottom2, .wa-bottom3 {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: white;
+    z-index: 100;
+  }
+
+  .wa-chats, .calls-list, .profile-menu, .wa-messages {
+    padding-bottom: 70px;
+  }
+
+  .profile { padding: 24px 16px; }
+  .profile-img { width: 84px; height: 84px; }
+  .home__title, .home__title2 { font-size: 22px; }
+  .home__text, .home__text2 { font-size: 14px; }
+  .home__button, .home__button2 { font-size: 15px; }
+}
