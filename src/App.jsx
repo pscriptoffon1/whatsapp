@@ -14,7 +14,7 @@ import MainChat from './screens/mainChat'
 import Call from './screens/call'
 import Camera from './screens/camera'
 import Profile from './screens/profile'
-import Chat from './screens/Chat'
+import Chat from './screens/chat'
 import Confidentiality from './screens/confidentiality'
 import Privacy from './screens/privacy'
 
